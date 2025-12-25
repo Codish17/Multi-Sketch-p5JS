@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Generative Studies</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="p5.min.js"></script>
+  <script type="module" src="main.js"></script>
+</head>
+
+<body>
+
+  <!-- Canvas lives OUTSIDE layout -->
+  <main id="sketch-container"></main>
+
+  <!-- UI layout -->
+  <div class="app">
+
+    <header class="header">
+      <div>
+        <h1>Generative Studies</h1>
+        <p class="subtitle">Experiments in motion, form, and interaction</p>
+      </div>
+    </header>
+
+    <section class="controls">
+      <button data-sketch="sketch1" class="sketch-btn">
+        <span class="title">Spiral Text</span>
+        <span class="desc">Typographic motion study</span>
+      </button>
+
+      <button data-sketch="sketch2" class="sketch-btn">
+        <span class="title">Flow Grid</span>
+        <span class="desc">Noise-driven field interaction</span>
+      </button>
+
+      <button data-sketch="sketch3" class="sketch-btn">
+        <span class="title">Centered Rectangles</span>
+        <span class="desc">Click-based spatial composition</span>
+      </button>
+      <!-- NEW SNOWFLAKE SKETCH BUTTON -->
+      <button data-sketch="sketch4" class="sketch-btn">
+        <span class="title">Snowflakes</span>
+        <span class="desc">Interactive winter grid</span>
+      </button>
+    </section>
+
+  </div>
+
+</body>
+
+</html>

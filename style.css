@@ -1,0 +1,98 @@
+:root {
+  --bg: #0b0c10;
+  --panel: rgba(255, 255, 255, 0.04);
+  --panel-hover: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.12);
+  --text-main: #f2f2f2;
+  --text-muted: #9a9a9a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #111 0%, #070707 60%);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  height: 100vh;
+}
+
+/* ---------- Header ---------- */
+
+.header {
+  grid-column: 1 / 2;
+  padding: 28px;
+}
+
+.header h1 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: 0.04em;
+}
+
+.subtitle {
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ---------- Controls ---------- */
+
+.controls {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sketch-btn {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 16px 18px;
+  text-align: left;
+  border-radius: 14px;
+  cursor: pointer;
+  color: var(--text-main);
+  transition: all 0.25s ease;
+  backdrop-filter: blur(8px);
+}
+
+.sketch-btn:hover {
+  background: var(--panel-hover);
+  transform: translateY(-2px);
+}
+
+.sketch-btn.active {
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+
+.sketch-btn .title {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.sketch-btn .desc {
+  display: block;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* ---------- Canvas ---------- */
+
+#sketch-container {
+  position: relative;
+  overflow: hidden;
+}
